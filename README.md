@@ -18,10 +18,14 @@ Here are the environment details from Unity. The observation space consists of 3
 ```
 File model.py contains the network (Actor and Critic) for DeepDPG and ddpg_agent.py contains policy for agent to make action. Run Continuous_Control.ipynb to see the details.
 
+## Evaluation
+The agent must get an average score of +30 over 100 consecutive episodes. The most recent score are stored using deque function in python's collection model. Say `scores = deque(maxlen=100)` Once the average score meet the demand, the weights of  models will be saved and the training will end.
+
 ## Depedency
 - python 3.6
 - [ml-agents](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) from Unity
 - Numpy
 - pytorch(0.4.0)
+- matplotlib
 
 
